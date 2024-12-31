@@ -1,0 +1,81 @@
+<!-- Website layout ideal designed by ZNukem -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freedom Scoops - The Open Source Game</title>
+  <link rel="icon" href="favicon.ico" />
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Link to GitHub with icon and text -->
+<a href="https://github.com/freedomscoops/freedomscoops"
+class="github-fork-button" target="_blank" title="Fork me on GitHub">
+  <i class="fab fa-github"></i> Fork me on GitHub
+</a>
+
+<!-- Add Font Awesome CDN link to load icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<!-- Sidebar -->
+<div class="side-panel" id="sidebar">
+ <a href="index.html">
+  <img
+  src="assets/logo.png?raw=true"
+  alt="Freedom Scoops Logo" style="width: 100%; max-width: 200px;
+  height: auto; display: block; margin: 0 auto;">
+
+  <a href="index.html" class="nav-link">Welcome</a>
+  <a href="#index.html" class="nav-link">Story</a>
+  <a href="#index.html" class="nav-link">Downloads</a>
+  <a href="#index.html" class="nav-link">Showcase</a>
+  <a href="index.html" class="nav-link">About</a>
+  <a href="index.html" class="nav-link">Follow Us</a>
+
+  <!-- Follow Us Section -->
+  <div style="margin-top: 20px; text-align: center;">
+    <h3 style="font-size: 16px; margin-bottom: 10px;">Follow Us</h3>
+    <a href="https://discord.gg/TSFYwTPqUk" target="_blank"
+    class="social-link" style="margin: 0 5px; text-decoration: none;">
+      <img src="https://img.icons8.com/color/48/000000/discord-logo.png"
+      alt="Discord" style="width: 24px;">
+    </a>
+    <a href="https://github.com/FreedomScoops" target="_blank"
+    class="social-link" style="margin: 0 5px; text-decoration: none;">
+      <img
+      src="https://img.icons8.com/material-outlined/48/000000/github.png"
+      alt="GitHub" style="width: 24px;">
+    </a>
+  </div>
+</div>
+
+  <!-- Main content -->
+  <div class="content">
+    <section id="welcome">
+        <h2>Full Changelog</h2>
+<p> Click on any button on sidebar or logo to return to main page.</p>
+        <div id="changelog-list"></div> <!-- Changelog content will be
+        injected here -->
+    </div>
+
+<footer>
+  <div style="display: flex; justify-content: center; width: 100%;">
+    <div>This website of Freedom Scoops is licensed under an
+    open-license | Freedom Scoops © 2020-2025 ZNukem and Contributors
+    </div>
+</footer>
+  </div>
+</div>
+
+ <script src="logfeed.js"></script>
+
+  <script>
+    // Toggle sidebar visibility
+    document.getElementById('sidebar').classList.toggle('open');
+    document.getElementById('changelogSidebar').classList.toggle('open');
+  </script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+/* General Page Styling */
+  body {
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background: linear-gradient(to top right, #1a0033, #8e008e); /* Deep cosmic space gradient */
+      color: #d9f9d9;
+      display: flex;
+      min-height: 200vh;
+      width : 208vh;
+      background-size: cover;
+      background-position: center;
+      word-wrap: break-word;
+      white-space: normal;
+    }
+    /* Sidebar */
+    .side-panel {
+      width: 0;
+      background: linear-gradient(to bottom, #8e008e, #00b300); /* Pink to light green gradient */
+      padding: 120px;
+      box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5);
+      color: #fff;
+      position: fixed;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow-y: auto;
+       /*transition: width 0.5s ease;*/ /* Smooth slide-in effect */
+    }
+    .side-panel.open {
+      width: 200px; /* Sidebar width when opened */
+    }
+    .side-panel h1 {
+      font-size: 26px;
+      text-align: center;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .nav-link {
+      display: block;
+      margin: 15px 0;
+      padding: 12px;
+      background-color: #00b300; /* Bright green */
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      border: 2px solid #ff00ff; /* Dark pink */
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform for up/down effect */
+    }
+    .nav-link:hover {
+      background-color: #ff66ff; /* Lighter pink on hover */
+      transform: translateY(-5px); /* Moves the button up by 5px on hover */
+    }
+    .nav-link:active {
+      transform: translateY(3px); /* Moves the button down slightly when clicked */
+    }
+    /* Content area */
+    .content {
+      margin-left: 400px; /* Space for the sidebar (adjust as needed) */
+      padding: 30px;
+      background: radial-gradient(circle, #002233, #003344);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+      color: #fff;
+      overflow-y: auto; /* Allow scrolling */
+      position: relative;
+    }
+    .content h2 {
+      font-size: 36px;
+      border-bottom: 3px solid #ff00ff;
+      padding-bottom: 10px;
+      color: #ff00ff;
+      text-shadow: 2px 2px #000;
+    }
+    .content p {
+      line-height: 1.8;
+      font-size: 18px;
+      color: #d9f9d9;
+    }
+
+    /* Change Log Sidebar */
+    .changelog-sidebar {
+      background: linear-gradient(to bottom, #003333, #006600); /* Green and teal gradient */
+      padding: 20px;
+      color: #fff;
+      position: auto;
+      top: 0;
+      right: -200px; /* Initially hide offscreen */
+      width: 2400px;
+      height: auto;
+      box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
+      overflow-y: auto;
+      transition: right 0.5s ease; /* Smooth slide-in effect */
+    }
+    .changelog-sidebar.open {
+      right: 0; /* Slide in from the right */
+    }
+    .changelog-sidebar h3 {
+      text-align: center;
+      color: #ff00ff;
+    }
+    .changelog-item {
+      background-color: #004d00;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    }
+
+    .changelog-item h4 {
+      margin: 0;
+      color: #ff66ff;
+      font-size: 16px;
+    }
+
+    .changelog-item p {
+      color: #d9f9d9;
+      font-size: 14px;
+    }
+
+    /* Hover effect */
+    .changelog-item:hover {
+      background-color: #006600; /* Darker green */
+      transform: translateY(-5px); /* Slightly lift the item */
+    }
+
+    .changelog-item:hover h4 {
+      color: #ffccff; /* Lighter pink on hover */
+    }
+
+    .changelog-item:hover p {
+      color: #e0f7e0; /* Lighter text on hover */
+    }
+     .view-more {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #00796b;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .view-more:hover {
+      background-color: #004d40;       
+   }
+
+    /* Commit Log Item Styling */
+    .commit-item {
+      background-color: #004d00; /* Base green background */
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover transitions */
+    }
+
+    .commit-item h4 {
+      margin: 0;
+      color: #ff66ff; /* Bold pink for commit title */
+      font-size: 16px;
+    }
+
+    .commit-item p {
+      color: #d9f9d9; /* Light green for commit message */
+      font-size: 14px;
+    }
+
+    /* Hover Effect for Commit Items */
+    .commit-item:hover {
+      background-color: #006600; /* Darker green on hover */
+      transform: translateY(-5px); /* Slight lift on hover */
+    }
+
+    .commit-item:hover h4 {
+      color: #ffccff; /* Lighter pink for commit title on hover */
+    }
+
+    .commit-item:hover p {
+      color: #e0f7e0; /* Lighter green for commit message on hover */
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #8e008e; /* Dark pink */
+      color: #fff;
+      font-size: 14px; /* Smaller font size */
+      border-top: 5px solid #ff00ff;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 99%;
+      z-index: 10; /* Ensures it's above other content */
+    }
+
+    /* Make sure the footer's content remains in place without affecting the page scroll */
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+    /* Social Link Icons Hover Effect */
+    .social-link {
+      display: inline-block;
+      margin: 0 5px;
+      transition: transform 0.3s ease, filter 0.3s ease; /* Smooth hover animations */
+    }
+
+    .social-link:hover {
+      transform: scale(1.2); /* Slightly enlarges the icon on hover */
+      filter: brightness(1.2); /* Makes the icon slightly brighter */
+    }
+
+    /* Optional: Styling for the icons */
+    .social-icon {
+      width: 24px; /* Consistent size for the icons */
+      height: auto;
+    }
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+      padding-top: 60px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .modal-content {
+      background: radial-gradient(circle, #002233, #003344);
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transform: scale(0.7); /* Start small */
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      position: relative;
+      top: 20%;
+    }
+    .modal-header {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .modal-body {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #555;
+      border-radius: 20px;  /* Rounded corners */
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* Fancy GitHub Fork Me Button */
+    .github-fork-button {
+      display: inline-block;
+      padding: 12px 20px;  /* Padding for the button */
+      background: linear-gradient(145deg, #6e7db3, #5e6b91);  /* Gradient background */
+      color: #fff;
+      font-size: 16px;  /* Text size */
+      font-weight: bold;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 30px;  /* Rounded corners */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Subtle shadow */
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      position: fixed;
+      bottom: 60px;  /* Position at the bottom of the screen */
+      right: 20px;   /* Position on the right side of the screen */
+      z-index: 1000;
+    }
+
+    /* Hover effect */
+    .github-fork-button:hover {
+      background: linear-gradient(145deg, #5e6b91, #6e7db3);  /* Inverse gradient on hover */
+      transform: translateY(-5px);  /* Slight lift effect */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);  /* Stronger shadow */
+    }
+
+    /* Add a smooth transition to make the button appear and disappear on scroll */
+    .github-fork-button.hidden {
+      opacity: 0;
+      pointer-events: none;  /* Disable interaction */
+      transition: opacity 0.3s ease;
+    }
+    /* Style for GitHub Actions Badges */
+    .badges-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 5px 15px;
+      border-radius: 20px;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: transform 0.2s;
+    }
+
+    .badge:hover {
+      transform: scale(1.1);
+    }
+
+    /* Success Badge (Green) */
+    .badge.success {
+      background-color: #28a745;
+    }
+
+    /* Failure Badge (Red) */
+    .badge.failure {
+      background-color: #dc3545;
+    }
+
+    /* In Progress Badge (Yellow) */
+    .badge.in-progress {
+      background-color: #ffc107;
+    }
+
+    /* Neutral Badge (Gray) */
+    .badge.neutral {
+      background-color: #6c757d;
+    }
+
